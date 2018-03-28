@@ -3,35 +3,42 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <title>Мост</title>
 </head>
 
 <body>
   <header class="header">
-    <nav class="header__nav">
-      <h1 class="header__nav-logo"><img src="" alt=""></h1>
-      <ul class="header__nav-list">
-        <li class="header__nav-item"><a href="">Как работает</a></li>
-        <li class="header__nav-item"><a href="">Преимущества</a></li>
-        <li class="header__nav-item"><a href="">Водителям</a></li>
-        <li class="header__nav-item"><a href="">О компании</a></li>
-        <li class="header__nav-item"><a href="">Контакты</a></li>
-      </ul>
-      <span>Бесплатный звонок</span>
-      <a href="tel:+78005553030">+7-800-555-30-30</a>
-    </nav>
+    <div class="header__nav-wrapper">
+      <nav class="header__nav">
+        <h1 class="header__nav-logo"><img src="./assets/img/most_logo_light.svg" alt="Мост"></h1>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="">Как работает</a></li>
+          <li class="header__nav-item"><a href="">Преимущества</a></li>
+          <li class="header__nav-item"><a href="">Водителям</a></li>
+          <li class="header__nav-item"><a href="">О компании</a></li>
+          <li class="header__nav-item"><a href="">Контакты</a></li>
+        </ul>
+        <div class="header__tel-box">
+          <h5 class="header__tel-title">Бесплатный звонок</h5>
+          <a href="tel:+78005553030" class="header__tel-link">+7-800-555-30-30</a>
+        </div>
+      </nav>
+    </div>
     <div class="header__wrapper">
       <h2 class="header__title">Путешествуй с профессиональным водителем</h2>
       <p class="header__text">со скидкой до 40%*</p>
       <a href="" class="header__link">Вызвать такси</a>
+      <p class="header__text-info">* на междугородние перевозки по сравнению со стоимостью по счетчику</p>
     </div>
   </header>
   <section class="most">
     <div class="most__wrapper">
       <div class="most_content">
-        <img src="" alt="">
-        <h3 class="most__title">Мост — сервис междугородних поездок
-с попутчиками и со скидкой до 40%</h3>
+        <img src="./assets/img/most_logo_dark.svg" alt="МОСТ">
+        <h3 class="most__title">Мост — сервис междугородних поездок<br> с попутчиками и со скидкой до 40%</h3>
       </div>
     </div>
   </section>
@@ -40,24 +47,31 @@
       <h2 class="work__title">Как работает</h2>
       <ul class="work__list">
         <li class="work__item">
-          <img src="" alt="">
-          <h4 class="work__item-title">создайте заказ</h4>
-          <p class="work__item-text">Через колл-центр или приложение TapTaxi</p>
+          <img src="./assets/img/img_work/mobile.svg" alt="">
+          <h4 class="work__item-title">Cоздайте заказ</h4>
+          <p class="work__item-text">Через колл-центр или
+            <br> приложение TapTaxi</p>
         </li>
         <li class="work__item">
-          <img src="" alt="">
+          <img src="./assets/img/img_work/loupe.svg" alt="">
           <h4 class="work__item-title">Дождитесь водителя</h4>
-          <p class="work__item-text">Сервис начал поиск — оператор свяжется с вами через 10 минут</p>
+          <p class="work__item-text">Сервис начал поиск — оператор
+            <br> свяжется с вами через 10 минут</p>
         </li>
         <li class="work__item">
-          <img src="" alt="">
+          <img src="./assets/img/img_work/mark.svg" alt="">
           <h4 class="work__item-title">Получите подтверждение</h4>
-          <p class="work__item-text">Водитель найден, на телефон позвонят для подтверждения</p>
+          <p class="work__item-text">Водитель найден, на телефон
+            <br> позвонят для подтверждения</p>
         </li>
+      </ul>
+      <ul class="work__list-2">
         <li class="work__item">
-          <img src="" alt="">
-          <h4 class="work__item-title">Счастливого пути</h4>
-          <p class="work__item-text">В назначенное время водитель будет ждать вас по указанному адресу</p>
+          <img src="./assets/img/img_work/car.svg" alt="">
+          <div class="work__item-box">
+            <h4 class="work__item-title">Счастливого пути</h4>
+            <p class="work__item-text">В назначенное время водитель будет ждать вас по указанному адресу</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -66,18 +80,18 @@
     <div class="advantages__wrapper">
       <h2 class="advantages__title">Преимущества</h2>
       <ul class="advantages__list">
-        <li class="advantages__item"><img src="" alt="">
-          <h5>Профессиональные водители</h5></li>
-        <li class="advantages__item"><img src="" alt="">
-          <h5>Скидка до 40% на поездку</h5></li>
-        <li class="advantages__item"><img src="" alt="">
-          <h5>Попутчики — экономия ещё 50-70%</h5></li>
-        <li class="advantages__item"><img src="" alt="">
-          <h5>Проверенный и надежный сервис</h5></li>
-        <li class="advantages__item"><img src="" alt="">
-          <h5>Поездка под контролем оператора</h5></li>
-        <li class="advantages__item"><img src="" alt="">
-          <h5>Прозрачное ценообразование</h5></li>
+        <li class="advantages__item"><img src="./assets/img/img_advantages/driver.svg" alt="">
+          <h5 class="advantages__item-title">Профессиональные<br> водители</h5></li>
+        <li class="advantages__item"><img src="./assets/img/img_advantages/moneybox.svg" alt="">
+          <h5 class="advantages__item-title">Скидка до 40%<br> на поездку</h5></li>
+        <li class="advantages__item"><img src="./assets/img/img_advantages/people.svg" alt="">
+          <h5 class="advantages__item-title">Попутчики — экономия<br> ещё 50-70%</h5></li>
+        <li class="advantages__item"><img src="./assets/img/img_advantages/shield.svg" alt="">
+          <h5 class="advantages__item-title">Проверенный<br> и надежный сервис</h5></li>
+        <li class="advantages__item"><img src="./assets/img/img_advantages/operator.svg" alt="">
+          <h5 class="advantages__item-title">Поездка под контролем<br> оператора</h5></li>
+        <li class="advantages__item"><img src="./assets/img/img_advantages/mobile.svg" alt="">
+          <h5 class="advantages__item-title">Прозрачное<br> ценообразование</h5></li>
       </ul>
     </div>
   </section>
@@ -91,36 +105,61 @@
       <h2 class="about__title">О сервисе Мост</h2>
       <div class="about__content">
         <ul class="about__list">
-          <li class="about__item">Мост — сервис междугородных перевозок пассажиров и багажа на легковом попутном такси по всей России со скидкой до 40% (по сравнению с километражем по счетчику)</li>
-          <li class="about__item">В сервисе Мост работают профессиональные водители такси, получившие лицензию, которые всегда исполняют свои обязательства</li>
-          <li class="about__item">Сервис Мост — часть федерального агрегатора такси-услуг TapTaxi, который работает по всей России</li>
+          <li class="about__item">Мост — сервис междугородных перевозок
+            <br> пассажиров и багажа на легковом попутном такси
+            <br> по всей России со скидкой до 40% (по сравнению
+            <br> с километражем по счетчику)</li>
+          <li class="about__item">В сервисе Мост работают профессиональные
+            <br> водители такси, получившие лицензию, которые
+            <br> всегда исполняют свои обязательства</li>
+          <li class="about__item">Сервис Мост — часть федерального агрегатора
+            <br> такси-услуг TapTaxi, который работает по всей
+            <br> России</li>
         </ul>
-        <ul class="about__list">
-          <li class="about__item">Кроме выгодной цены можно получить дополнительную скидку 50-70%, взяв с собой в поездку попутчиков</li>
-          <li class="about__item">Поэтому Мост прекрасная альтернатива поезду, самолёту, автобусу или другому междугороднему сервису перевозок</li>
-          <li class="about__item">Такси можно заказать по бесплатному по России телефону +7-800-555-30-30 или через приложение Tap-Taxi</li>
+        <ul class="about__list about__list--2">
+          <li class="about__item">Кроме выгодной цены можно получить
+            <br> дополнительную скидку 50-70%, взяв с собой
+            <br> в поездку попутчиков</li>
+          <li class="about__item">Поэтому Мост прекрасная альтернатива поезду,
+            <br> самолёту, автобусу или другому междугороднему
+            <br> сервису перевозок</li>
+          <li class="about__item">Такси можно заказать по бесплатному по России
+            <Br> телефону +7-800-555-30-30 или через приложение
+            <br> Tap-Taxi</li>
         </ul>
       </div>
       <h5 class="about__subtitle">Приложение Tap-Taxi</h5>
-      <a href=""></a>
-      <a href=""></a>
+      <div class="about__box">
+        <a href="" class="about__app about__app--play"></a>
+        <a href="" class=" about__app about__app--store"></a>
+      </div>
     </div>
   </section>
   <section class="driver">
     <div class="driver__wrapper">
       <h2 class="driver__title">Водителям</h2>
       <ul class="driver__list">
-        <li class="driver__item"><img src="" alt=""><h5>Попутные заказы по всей России</h5></li>
-        <li class="driver__item"><img src="" alt=""><h5>Уменьшение холостого пробега</h5></li>
-        <li class="driver__item"><img src="" alt=""><h5>Минимальная комиссия сервиса</h5></li>
+        <li class="driver__item">
+          <img src="./assets/img/img_driver/orders.svg" alt="">
+          <h5 class="driver__item-title">Попутные заказы<br> по всей России</h5>
+        </li>
+        <li class="driver__item">
+          <img src="./assets/img/img_driver/mileage.svg" alt="">
+          <h5 class="driver__item-title">Уменьшение<br> холостого пробега</h5>
+        </li>
+        <li class="driver__item">
+          <img src="./assets/img/img_driver/commission.svg" alt="">
+          <h5 class="driver__item-title">Минимальная<br> комиссия сервиса</h5>
+        </li>
       </ul>
     </div>
     <div class="driver__wrapper-2">
       <div class="driver__content">
         <div class="driver__box">
-          <a href=""></a>
+          <a href="" class="about__app about__app--play"></a>
           <h5 class="driver__box-title">Приложение для водителей</h5>
-          <p class="driver__box-text">Для входа в сервис Мост установите и зарегистрируйтесь в мобильном приложении «Такси Мост. Водитель». Загрузите свои документы и оператор пришлет вам смс с инструкцией для входа.</p>
+          <p class="driver__box-text">Для входа в сервис Мост установите и зарегистрируйтесь в мобильном приложении «Такси Мост. Водитель».</p>
+          <p class="driver__box-text">Загрузите свои документы и оператор пришлет вам смс с инструкцией для входа.</p>
           <a href="" class="driver__box-link">Узнать подробнее</a>
         </div>
         <div class="driver__box-2"><img src="" alt=""></div>
@@ -132,20 +171,26 @@
       <div class="footer__content">
         <div class="footer__emailing">
           <h5 class="footer__emailing-title">Рассылка</h5>
-          <p class="footer__emailing-text">Получайте спецпредложения, скидки и полезную информацию первыми!</p>
+          <p class="footer__emailing-text">Получайте спецпредложения, скидки<br> и полезную информацию первыми!</p>
+          <form action="" class="footer__form">
+            <input type="text" placeholder="E-mail">
+            <button class="footer__button">Подписаться</button>
+          </form>
         </div>
         <div class="footer__contacts">
           <h5 class="footer__contacts-title">Контактная информация</h5>
-          <ul class="footer__contacts-list">
-            <li class="footer__contacts-item"><a href=""></a></li>
-            <li class="footer__contacts-item"><a href=""></a></li>
-            <li class="footer__contacts-item"><a href=""></a></li>
+          <div class="footer__contacts--box">
+          <ul class="footer__contacts-list footer__contacts-list--left">
+            <li class="footer__contacts-item"><img src="./assets/img/img_footer/mobile.svg" alt=""><a href="tel:+78005553030">+7-800-555-30-30</a></li>
+            <li class="footer__contacts-item"><img src="./assets/img/img_footer/mail.svg" alt=""><a href="mailto:taximost@mail.ru">taximost@mail.ru</a></li>
+            <li class="footer__contacts-item"><img src="./assets/img/img_footer/skype.svg" alt=""><a href="skype:Такси Мост?chat">Такси Мост</a></li>
           </ul>
           <ul class="footer__contacts-list">
-            <li class="footer__contacts-item"><a href=""></a></li>
-            <li class="footer__contacts-item"><a href=""></a></li>
-            <li class="footer__contacts-item"><a href=""></a></li>
+            <li class="footer__contacts-item"><img src="./assets/img/img_footer/viber.svg" alt=""><a href="viber://add?number=79042454694">Viber +79042454694</a></li>
+            <li class="footer__contacts-item"><img src="./assets/img/img_footer/whatsapp.svg" alt=""><a href="whatsapp://send?phone=+79042454694">WhatsApp +79042454694</a></li>
+            <li class="footer__contacts-item"><img src="./assets/img/img_footer/vk.svg" alt=""><a href="vk.com/club78659912" target="_blank">VK vk.com/club78659912</a></li>
           </ul>
+          </div>
         </div>
       </div>
       <p class="footer__copyright">© 2018, Мост</p>
