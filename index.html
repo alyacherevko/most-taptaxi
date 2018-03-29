@@ -3,10 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/slider.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <title>Мост</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/js/slider.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('a[href^="#"], *[data-href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var t = 1000;
+      var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
+      $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
+    });
+  });
+  </script>
 </head>
 
 <body>
@@ -15,11 +30,11 @@
       <nav class="header__nav">
         <h1 class="header__nav-logo"><img src="./assets/img/most_logo_light.svg" alt="Мост"></h1>
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="">Как работает</a></li>
-          <li class="header__nav-item"><a href="">Преимущества</a></li>
-          <li class="header__nav-item"><a href="">Водителям</a></li>
-          <li class="header__nav-item"><a href="">О компании</a></li>
-          <li class="header__nav-item"><a href="">Контакты</a></li>
+          <li class="header__nav-item"><a href="#work">Как работает</a></li>
+          <li class="header__nav-item"><a href="#advantages">Преимущества</a></li>
+          <li class="header__nav-item"><a href="#driver">Водителям</a></li>
+          <li class="header__nav-item"><a href="#about">О компании</a></li>
+          <li class="header__nav-item"><a href="#footer">Контакты</a></li>
         </ul>
         <div class="header__tel-box">
           <h5 class="header__tel-title">Бесплатный звонок</h5>
@@ -42,7 +57,7 @@
       </div>
     </div>
   </section>
-  <section class="work">
+  <section class="work" id="work">
     <div class="work__wrapper">
       <h2 class="work__title">Как работает</h2>
       <ul class="work__list">
@@ -76,7 +91,7 @@
       </ul>
     </div>
   </section>
-  <section class="advantages">
+  <section class="advantages" id="advantages">
     <div class="advantages__wrapper">
       <h2 class="advantages__title">Преимущества</h2>
       <ul class="advantages__list">
@@ -98,9 +113,34 @@
   <section class="reviews">
     <div class="reviews__wrapper">
       <h2 class="reviews__title">Отзывы</h2>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="reviews__box">
+            <img src="./assets/img/img_reviews/Natali.png" alt="" class="reviews__box-img">
+            <div class="reviews__box-text">
+              <h5 class="reviews__box-text-title">Наталья</h5>
+              <p class="reviews__box-text-row">Всем здравствуйте! Уже несколько раз пользовалась<br> сервисом «Мост», ни разу не подвели. Делала заявку по<br> телефону, и даже ночью находилась машина. Недавно<br> узнала о группе во вконтакте, и о том, что можно даже<br> подыскать попутчиков. Очень удобно. Спасибо большое.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div style="background-color: blue;"></div>
+        </div>
+        <div class="mySlides fade">
+          <div style="background-color: green;"></div>
+        </div>
+        <a onclick="plusSlides(-1)" class="prev"></a>
+        <a onclick="plusSlides(1)" class="next"></a>
+    </div>
+    <br>
+    <div style="text-align: center; margin-top: 30px;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
     </div>
   </section>
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__wrapper">
       <h2 class="about__title">О сервисе Мост</h2>
       <div class="about__content">
@@ -135,7 +175,7 @@
       </div>
     </div>
   </section>
-  <section class="driver">
+  <section class="driver" id="driver">
     <div class="driver__wrapper">
       <h2 class="driver__title">Водителям</h2>
       <ul class="driver__list">
@@ -166,7 +206,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer__wrapper">
       <div class="footer__content">
         <div class="footer__emailing">
