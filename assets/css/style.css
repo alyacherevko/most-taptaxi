@@ -27,11 +27,14 @@ a {
 
 
 
+
+
 /*   W R A P P E R   */
 
 .header__nav-wrapper,
 .driver__wrapper-2,
-.footer__wrapper {
+.footer__wrapper,
+.reviews__wrapper {
   width: 1024px;
   margin: 0 auto;
 }
@@ -45,6 +48,8 @@ a {
   width: 960px;
   margin: 0 auto;
 }
+
+
 
 
 
@@ -181,6 +186,8 @@ a {
 
 
 
+
+
 /*   M O S T   */
 
 .most {
@@ -200,6 +207,8 @@ a {
   color: #EF7F1A;
   margin-left: 50px;
 }
+
+
 
 
 
@@ -316,6 +325,8 @@ a {
 
 
 
+
+
 /*   A D V A N T A G E S   */
 
 .advantages {
@@ -365,22 +376,54 @@ a {
 
 
 
-
-
-
-
-
 /*   R E V I E W S   */
 
 .reviews {
-  display: none;
+  padding-bottom: 100px;
 }
 
+.reviews__wrapper {
+  background: url(../img/img_reviews/cite_2.svg) no-repeat 380px 160px, url(../img/img_reviews/cite_1.svg) no-repeat 770px 280px;
+  background-color: #FAFAFA;
+  box-shadow: 0px 4px 8px rgba(66, 66, 66, 0.25);
+  padding-bottom: 100px;
+}
 
+.reviews__title {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 51px;
+  font-size: 36px;
+  text-align: center;
+  color: #000000;
+  padding: 100px 0 30px;
+}
 
+.reviews__box {
+  display: flex;
+  justify-content: center;
+}
 
+.reviews__box-img {
+  margin-right: 37px;
+}
 
+.reviews__box-text-title {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 23px;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 5px;
+}
 
+.reviews__box-text-row {
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: 16px;
+  color: #000000;
+}
 
 
 /*   A B O U T   */
@@ -481,6 +524,8 @@ a {
   top: -3px;
   margin-right: -8px;
 }
+
+
 
 
 
@@ -603,6 +648,8 @@ a {
   background-repeat: no-repeat;
   margin-left: 15px;
 }
+
+
 
 
 
