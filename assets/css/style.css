@@ -408,6 +408,10 @@ a {
   margin-right: 37px;
 }
 
+.reviews__box-img--maria {
+  height: 156px;
+}
+
 .reviews__box-text-title {
   font-style: normal;
   font-weight: bold;
