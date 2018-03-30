@@ -11,7 +11,7 @@
   <title>Мост</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./assets/js/slider.js"></script>
+
   <script>
   $(document).ready(function() {
     $('a[href^="#"], *[data-href^="#"]').on('click', function(e) {
@@ -21,6 +21,7 @@
       $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
     });
   });
+
   </script>
 </head>
 
@@ -119,25 +120,41 @@
             <img src="./assets/img/img_reviews/Natali.png" alt="" class="reviews__box-img">
             <div class="reviews__box-text">
               <h5 class="reviews__box-text-title">Наталья</h5>
-              <p class="reviews__box-text-row">Всем здравствуйте! Уже несколько раз пользовалась<br> сервисом «Мост», ни разу не подвели. Делала заявку по<br> телефону, и даже ночью находилась машина. Недавно<br> узнала о группе во вконтакте, и о том, что можно даже<br> подыскать попутчиков. Очень удобно. Спасибо большое.</p>
+              <p class="reviews__box-text-row">Всем здравствуйте! Уже несколько раз пользовалась
+                <br> сервисом «Мост», ни разу не подвели. Делала заявку по
+                <br> телефону, и даже ночью находилась машина. Недавно
+                <br> узнала о группе во вконтакте, и о том, что можно даже
+                <br> подыскать попутчиков. Очень удобно. Спасибо большое.</p>
             </div>
           </div>
         </div>
         <div class="mySlides fade">
-          <div style="background-color: blue;"></div>
+          <div class="reviews__box">
+            <img src="./assets/img/img_reviews/Maria.png" alt="" class="reviews__box-img reviews__box-img--maria">
+            <div class="reviews__box-text">
+              <h5 class="reviews__box-text-title">Мария</h5>
+              <p class="reviews__box-text-row">Хочу от души выразить благодарность за предоставленный<br> автомобиль, который быстро и с комфортом доставил меня<br> по назначению. Отдельное спасибо за профессионального<br> водителя (Андрей Малой), его доброжелательное<br> отношение и качественное вождение по нашим нелёгким<br> дорогам.  Спасибо!!! </p>
+            </div>
+          </div>
         </div>
         <div class="mySlides fade">
-          <div style="background-color: green;"></div>
+          <div class="reviews__box">
+            <img src="./assets/img/img_reviews/Lipa.png" alt="" class="reviews__box-img reviews__box-img--maria">
+            <div class="reviews__box-text">
+              <h5 class="reviews__box-text-title">Олимпиада</h5>
+              <p class="reviews__box-text-row">Только что для меня была организована встреча в<br> Аэропорту Казани. Водитель приехал во время, очень<br> приятный человек. Спасибо оператором за качественную<br> работу. Поездка прошла замечательно.</p>
+            </div>
+          </div>
         </div>
         <a onclick="plusSlides(-1)" class="prev"></a>
         <a onclick="plusSlides(1)" class="next"></a>
-    </div>
-    <br>
-    <div style="text-align: center; margin-top: 30px;">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+      </div>
+      <br>
+      <div style="text-align: center; margin-top: 30px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
   </section>
   <section class="about" id="about">
@@ -211,7 +228,8 @@
       <div class="footer__content">
         <div class="footer__emailing">
           <h5 class="footer__emailing-title">Рассылка</h5>
-          <p class="footer__emailing-text">Получайте спецпредложения, скидки<br> и полезную информацию первыми!</p>
+          <p class="footer__emailing-text">Получайте спецпредложения, скидки
+            <br> и полезную информацию первыми!</p>
           <form action="" class="footer__form">
             <input type="text" placeholder="E-mail">
             <button class="footer__button">Подписаться</button>
@@ -220,22 +238,23 @@
         <div class="footer__contacts">
           <h5 class="footer__contacts-title">Контактная информация</h5>
           <div class="footer__contacts--box">
-          <ul class="footer__contacts-list footer__contacts-list--left">
-            <li class="footer__contacts-item"><img src="./assets/img/img_footer/mobile.svg" alt=""><a href="tel:+78005553030">+7-800-555-30-30</a></li>
-            <li class="footer__contacts-item"><img src="./assets/img/img_footer/mail.svg" alt=""><a href="mailto:taximost@mail.ru">taximost@mail.ru</a></li>
-            <li class="footer__contacts-item"><img src="./assets/img/img_footer/skype.svg" alt=""><a href="skype:Такси Мост?chat">Такси Мост</a></li>
-          </ul>
-          <ul class="footer__contacts-list">
-            <li class="footer__contacts-item"><img src="./assets/img/img_footer/viber.svg" alt=""><a href="viber://add?number=79042454694">Viber +79042454694</a></li>
-            <li class="footer__contacts-item"><img src="./assets/img/img_footer/whatsapp.svg" alt=""><a href="whatsapp://send?phone=+79042454694">WhatsApp +79042454694</a></li>
-            <li class="footer__contacts-item"><img src="./assets/img/img_footer/vk.svg" alt=""><a href="vk.com/club78659912" target="_blank">VK vk.com/club78659912</a></li>
-          </ul>
+            <ul class="footer__contacts-list footer__contacts-list--left">
+              <li class="footer__contacts-item"><img src="./assets/img/img_footer/mobile.svg" alt=""><a href="tel:+78005553030">+7-800-555-30-30</a></li>
+              <li class="footer__contacts-item"><img src="./assets/img/img_footer/mail.svg" alt=""><a href="mailto:taximost@mail.ru">taximost@mail.ru</a></li>
+              <li class="footer__contacts-item"><img src="./assets/img/img_footer/skype.svg" alt=""><a href="skype:Такси Мост?chat">Такси Мост</a></li>
+            </ul>
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item"><img src="./assets/img/img_footer/viber.svg" alt=""><a href="viber://add?number=79042454694">Viber +79042454694</a></li>
+              <li class="footer__contacts-item"><img src="./assets/img/img_footer/whatsapp.svg" alt=""><a href="whatsapp://send?phone=+79042454694">WhatsApp +79042454694</a></li>
+              <li class="footer__contacts-item"><img src="./assets/img/img_footer/vk.svg" alt=""><a href="vk.com/club78659912" target="_blank">VK vk.com/club78659912</a></li>
+            </ul>
           </div>
         </div>
       </div>
       <p class="footer__copyright">© 2018, Мост</p>
     </div>
   </footer>
+  <script src="./assets/js/slider.js"></script>
 </body>
 
 </html>
