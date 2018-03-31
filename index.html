@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/slider.css">
+  <link rel="stylesheet" href="./assets/css/menu_style.css">
+  <link rel="stylesheet" href="./assets/css/style320.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <title>Мост</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <script src="./assets/js/city_select.js"></script>
   <script>
   $(document).ready(function() {
     $('a[href^="#"], *[data-href^="#"]').on('click', function(e) {
@@ -30,31 +32,71 @@
     <div class="header__nav-wrapper">
       <nav class="header__nav">
         <h1 class="header__nav-logo"><img src="./assets/img/most_logo_light.svg" alt="Мост"></h1>
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#work">Как работает</a></li>
-          <li class="header__nav-item"><a href="#advantages">Преимущества</a></li>
-          <li class="header__nav-item"><a href="#driver">Водителям</a></li>
-          <li class="header__nav-item"><a href="#about">О компании</a></li>
-          <li class="header__nav-item"><a href="#footer">Контакты</a></li>
-        </ul>
-        <div class="header__tel-box">
-          <h5 class="header__tel-title">Бесплатный звонок</h5>
-          <a href="tel:+78005553030" class="header__tel-link">+7-800-555-30-30</a>
-        </div>
+        <a href="tel:+78005553030" class="header__tel-link--mobile">Позвонить</a>
+        <div class="menu">
+          <div class="container">
+            <section>
+              <p>
+                <button id="trigger-overlay" type="button" class="trigger-overlay"></button>
+              </p>
+            </section>
+          </div>
+          <!-- /container -->
+          <!-- open/close -->
+          <div class="overlay overlay-slidedown">
+            <button type="button" class="overlay-close">Close</button>
+            <nav>
+              <ul>
+                <li><a href="#work" class="menu_close">Как работает</a></li>
+                <li><a href="#advantages" class="menu_close">Преимущества</a></li>
+                <li><a href="#driver" class="menu_close">Водителям</a></li>
+                <li><a href="#about" class="menu_close">О компании</a></li>
+                <li><a href="#footer" class="menu_close">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#work">Как работает</a></li>
+            <li class="header__nav-item"><a href="#advantages">Преимущества</a></li>
+            <li class="header__nav-item"><a href="#driver">Водителям</a></li>
+            <li class="header__nav-item"><a href="#about">О компании</a></li>
+            <li class="header__nav-item"><a href="#footer">Контакты</a></li>
+          </ul>
+          <div class="header__tel-box">
+            <h5 class="header__tel-title">Бесплатный звонок</h5>
+            <a href="tel:+78005553030" class="header__tel-link">+7-800-555-30-30</a>
+          </div>
       </nav>
-    </div>
-    <div class="header__wrapper">
-      <h2 class="header__title">Путешествуй с профессиональным водителем</h2>
-      <p class="header__text">со скидкой до 40%*</p>
-      <a href="" class="header__link">Вызвать такси</a>
-      <p class="header__text-info">* на междугородние перевозки по сравнению со стоимостью по счетчику</p>
-    </div>
+      </div>
+      <div class="header__wrapper">
+        <h2 class="header__title">Путешествуй с профессиональным водителем</h2>
+        <div class="header__box">
+          <span class="header__text-span">из</span>
+          <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+            <option value=""></option>
+            <option value="kasan">Казань</option>
+            <option value="krasnodar">Краснодар</option>
+            <option value="ninovgorod">Нижний Новгород</option>
+            <option value="novorossisk">Новороссийск</option>
+            <option value="samara">Самара</option>
+            <option value="sochi">Сочи</option>
+            <option value="sterlitamak">Стерлитамак</option>
+            <option value="tolyatti">Тольятти</option>
+            <option value="ufa">Уфа</option>
+          </select>
+          <span class="header__text-span header__text-span--v">в</span>
+          <select id="ddl2"></select>
+          <p class="header__text">со скидкой до 40%*</p>
+        </div>
+        <a href="" class="header__link">Вызвать такси</a>
+        <p class="header__text-info">* на междугородние перевозки по сравнению со стоимостью по счетчику</p>
+      </div>
   </header>
   <section class="most">
     <div class="most__wrapper">
       <div class="most_content">
         <img src="./assets/img/most_logo_dark.svg" alt="МОСТ">
-        <h3 class="most__title">Мост — сервис междугородних поездок<br> с попутчиками и со скидкой до 40%</h3>
+        <h3 class="most__title">Мост — сервис междугородних поездок с попутчиками и со скидкой до 40%</h3>
       </div>
     </div>
   </section>
@@ -120,11 +162,7 @@
             <img src="./assets/img/img_reviews/Natali.png" alt="" class="reviews__box-img">
             <div class="reviews__box-text">
               <h5 class="reviews__box-text-title">Наталья</h5>
-              <p class="reviews__box-text-row">Всем здравствуйте! Уже несколько раз пользовалась
-                <br> сервисом «Мост», ни разу не подвели. Делала заявку по
-                <br> телефону, и даже ночью находилась машина. Недавно
-                <br> узнала о группе во вконтакте, и о том, что можно даже
-                <br> подыскать попутчиков. Очень удобно. Спасибо большое.</p>
+              <p class="reviews__box-text-row">Всем здравствуйте! Уже несколько раз пользовалась сервисом «Мост», ни разу не подвели. Делала заявку по телефону, и даже ночью находилась машина. Недавно узнала о группе во вконтакте, и о том, что можно даже подыскать попутчиков. Очень удобно. Спасибо большое.</p>
             </div>
           </div>
         </div>
@@ -133,7 +171,7 @@
             <img src="./assets/img/img_reviews/Maria.png" alt="" class="reviews__box-img reviews__box-img--maria">
             <div class="reviews__box-text">
               <h5 class="reviews__box-text-title">Мария</h5>
-              <p class="reviews__box-text-row">Хочу от души выразить благодарность за предоставленный<br> автомобиль, который быстро и с комфортом доставил меня<br> по назначению. Отдельное спасибо за профессионального<br> водителя (Андрей Малой), его доброжелательное<br> отношение и качественное вождение по нашим нелёгким<br> дорогам.  Спасибо!!! </p>
+              <p class="reviews__box-text-row">Хочу от души выразить благодарность за предоставленный автомобиль, который быстро и с комфортом доставил меня по назначению. Отдельное спасибо за профессионального водителя (Андрей Малой), его доброжелательное отношение и качественное вождение по нашим нелёгким дорогам. Спасибо!!! </p>
             </div>
           </div>
         </div>
@@ -142,7 +180,7 @@
             <img src="./assets/img/img_reviews/Lipa.png" alt="" class="reviews__box-img reviews__box-img--maria">
             <div class="reviews__box-text">
               <h5 class="reviews__box-text-title">Олимпиада</h5>
-              <p class="reviews__box-text-row">Только что для меня была организована встреча в<br> Аэропорту Казани. Водитель приехал во время, очень<br> приятный человек. Спасибо оператором за качественную<br> работу. Поездка прошла замечательно.</p>
+              <p class="reviews__box-text-row">Только что для меня была организована встреча в Аэропорту Казани. Водитель приехал во время, очень приятный человек. Спасибо оператором за качественную работу. Поездка прошла замечательно.</p>
             </div>
           </div>
         </div>
@@ -150,11 +188,12 @@
         <a onclick="plusSlides(1)" class="next"></a>
       </div>
       <br>
-      <div style="text-align: center; margin-top: 30px;">
+      <div style="text-align: center; margin: 30px 0;">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
+      <span class="reviews__link">Остальные отзывы <a href="https://vk.com/topic-78659912_34810642" class="reviews__link-vk" target="_blank"></a></span>
     </div>
   </section>
   <section class="about" id="about">
@@ -162,27 +201,16 @@
       <h2 class="about__title">О сервисе Мост</h2>
       <div class="about__content">
         <ul class="about__list">
-          <li class="about__item">Мост — сервис междугородных перевозок
-            <br> пассажиров и багажа на легковом попутном такси
-            <br> по всей России со скидкой до 40% (по сравнению
-            <br> с километражем по счетчику)</li>
-          <li class="about__item">В сервисе Мост работают профессиональные
-            <br> водители такси, получившие лицензию, которые
-            <br> всегда исполняют свои обязательства</li>
-          <li class="about__item">Сервис Мост — часть федерального агрегатора
-            <br> такси-услуг TapTaxi, который работает по всей
-            <br> России</li>
+          <li class="about__item">Мост — сервис междугородных перевозок пассажиров и багажа на легковом попутном такси по всей России со скидкой до 40% (по сравнению с километражем по счетчику)</li>
+          <li class="about__item">В сервисе Мост работают профессиональные водители такси, получившие лицензию, которые всегда исполняют свои обязательства</li>
+          <li class="about__item">Сервис Мост — часть федерального агрегатора такси-услуг TapTaxi, который работает по всей России
+          </li>
         </ul>
         <ul class="about__list about__list--2">
-          <li class="about__item">Кроме выгодной цены можно получить
-            <br> дополнительную скидку 50-70%, взяв с собой
-            <br> в поездку попутчиков</li>
-          <li class="about__item">Поэтому Мост прекрасная альтернатива поезду,
-            <br> самолёту, автобусу или другому междугороднему
-            <br> сервису перевозок</li>
-          <li class="about__item">Такси можно заказать по бесплатному по России
-            <Br> телефону +7-800-555-30-30 или через приложение
-            <br> Tap-Taxi</li>
+          <li class="about__item">Кроме выгодной цены можно получить дополнительную скидку 50-70%, взяв с собой в поездку попутчиков</li>
+          <li class="about__item">Поэтому Мост прекрасная альтернатива поезду, самолёту, автобусу или другому междугороднему сервису перевозок</li>
+          <li class="about__item">Такси можно заказать по бесплатному по России телефону +7-800-555-30-30 или через приложение Tap-Taxi
+          </li>
         </ul>
       </div>
       <h5 class="about__subtitle">Приложение Tap-Taxi</h5>
@@ -254,6 +282,7 @@
       <p class="footer__copyright">© 2018, Мост</p>
     </div>
   </footer>
+  <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/slider.js"></script>
 </body>
 
