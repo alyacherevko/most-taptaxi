@@ -100,3 +100,15 @@
   }
 }
 
+@media only screen and (max-width: 800px) and (min-width: 641px) {
+  .slideshow-container {
+    max-width: 580px;
+  }
+
+  .prev, .next {
+    height: 15.09px;
+    padding: 4px;
+    top: 65%;
+  }
+}
+
