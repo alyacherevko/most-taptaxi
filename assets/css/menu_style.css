@@ -1,100 +1,101 @@
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(23.11deg, #266DEA 0%, #2EB0FD 100%);
-  opacity: 0.9;
-  z-index: 11;
+/* === SASS === */
+/* variables */
+/* mixins */
+/* placeholders */
+#mobile-menu li a {
+  text-transform: uppercase;
 }
 
-/* Overlay closing cross */
-.overlay .overlay-close {
-  width: 31px;
-  height: 31px;
-  position: absolute;
-  right: 25px;
-  top: 40px;
+#hamburger {
+  cursor: pointer;
+  float: right;
   overflow: hidden;
-  border: none;
-  background: url(../img/close.svg) no-repeat center center;
-  text-indent: 200%;
-  color: transparent;
-  outline: none;
-  z-index: 100;
-}
-
-/* Menu style */
-.overlay nav {
-  text-align: center;
   position: relative;
-  top: 60%;
-  height: 60%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  width: 20px;
+  height: 16px;
+  margin-top: 10px;
 }
-
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  height: 100%;
-  position: relative;
+#hamburger span,
+#hamburger span:before,
+#hamburger span:after {
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
-
-.overlay ul li {
+#hamburger span {
+  width: 20px;
+  height: 16px;
   display: block;
-  height: 20%;
-  height: calc(100% / 5);
-  min-height: 54px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.overlay ul li a {
-  font-size: 25px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  display: block;
-  color: #f2f2f2;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-  color: #423ADC;
-}
-
-/* Effects */
-.overlay-slidedown {
-  visibility: hidden;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
-  transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
-}
-
-.overlay-slidedown.open {
-  visibility: visible;
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-}
-
-.trigger-overlay {
-  display: block;
-  width: 40px;
-  height: 23px;
-  margin-top: 25px;
-  background-image: url(../img/menu.svg);
+  background-image: url(../img/open.svg);
+  background-size: auto;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  border: none;
-  background-color: #fff;
+}
+
+
+/* mobile-menu */
+#overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#mobile-menu {
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  background-color: (0, 0, 0, 1);
+  transition: 0.25s;
+  display: block !important;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+  position: fixed;
+  right: -100%;
+  top: 90px;
+  width: 19em;
+  z-index: 9999;
+}
+#mobile-menu header {
+  padding-right: 5%;
+}
+#mobile-menu li {
+  clear: right;
+}
+#mobile-menu li a {
+  color: #fff;
+  font-size: 1.5em;
+  border-bottom: 3px solid #EF7F1A;
+  display: block;
+  text-align: left;
+  padding: 0.8em;
+}
+
+#mobile-menu li:nth-child(5) a {
+  border-bottom: none;
+}
+
+#mobile-menu li a:hover {
+  background-color: #EF7F1A;
+}
+#mobile-menu li a:active, #mobile-menu li a.active {
+  background-color: #EF7F1A;
+  color: #9a9a9a;
+}
+#mobile-menu li.last a {
+  border-bottom: none;
+}
+#mobile-menu.open-menu {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.mobile-menu #mobile-menu {
+  right: 0;
 }
