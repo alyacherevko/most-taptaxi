@@ -1,40 +1,41 @@
-(function() {
-  var triggerBttn = document.getElementById( 'trigger-overlay' ),
-    overlay = document.querySelector( 'div.overlay' ),
-    closeBttn = overlay.querySelector( 'button.overlay-close' );
-    transEndEventNames = {
-      'WebkitTransition': 'webkitTransitionEnd',
-      'MozTransition': 'transitionend',
-      'OTransition': 'oTransitionEnd',
-      'msTransition': 'MSTransitionEnd',
-      'transition': 'transitionend'
-    },
-    transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-    support = { transitions : Modernizr.csstransitions };
-
-  function toggleOverlay() {
-    if( classie.has( overlay, 'open' ) ) {
-      classie.remove( overlay, 'open' );
-      classie.add( overlay, 'close' );
-      var onEndTransitionFn = function( ev ) {
-        if( support.transitions ) {
-          if( ev.propertyName !== 'visibility' ) return;
-          this.removeEventListener( transEndEventName, onEndTransitionFn );
-        }
-        classie.remove( overlay, 'close' );
-      };
-      if( support.transitions ) {
-        overlay.addEventListener( transEndEventName, onEndTransitionFn );
-      }
-      else {
-        onEndTransitionFn();
-      }
+// mobile menu
+$(function() {
+  $("#hamburger").on('click', function(e) {
+    var $overlay = jQuery('<div>').attr('id', 'overlay');
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $("#header").toggleClass('open-menu');
+    $("body, html").toggleClass('mobile-menu');
+    if (!$("#overlay").length) {
+      $("body").append($overlay);
+      $overlay.fadeOut(0);
     }
-    else if( !classie.has( overlay, 'close' ) ) {
-      classie.add( overlay, 'open' );
-    }
-  }
+    $("#overlay").fadeToggle(700);
+    $("html,body").css("overflow","hidden");
+  });
 
-  triggerBttn.addEventListener( 'click', toggleOverlay );
-  closeBttn.addEventListener( 'click', toggleOverlay );
-})();
+  $('body').on('click touchstart', '#overlay', function(e) {
+    e.preventDefault();
+    $("body, html").removeClass('mobile-menu');
+    $("#overlay").fadeOut(700);
+    $('#hamburger').removeClass('active');
+    $("html,body").css("overflow","auto");
+
+  });
+
+  $('body').on('click touchstart', '.close', function(e) {
+    e.preventDefault();
+    $("body, html").removeClass('mobile-menu');
+    $("#overlay").fadeOut(700);
+    $('#hamburger').removeClass('active');
+    $("html,body").css("overflow","auto");
+
+  });
+
+  $("#mobile-menu a").on('click', function(e) {
+    $("body, html").removeClass('mobile-menu');
+    $("#overlay").fadeOut(700);
+    $('#hamburger').removeClass('active');
+    $("html,body").css("overflow","auto");
+  });
+});
