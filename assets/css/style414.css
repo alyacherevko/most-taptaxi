@@ -24,6 +24,11 @@
     display: none;
   }
 
+  #hamburger,
+  #mobile-menu {
+   display: block;
+  }
+
   .header {
     background-position: 47%;
   }
@@ -97,6 +102,10 @@
     margin-bottom: 40px;
   }
 
+  .work__item--tablet {
+    display: none;
+  }
+
   .work__list-2 {
     margin-top: 0;
   }
@@ -166,6 +175,7 @@
   }
 
   .reviews__box-text-row {
+    width: 100%;
     font-size: 14px;
     padding: 0 25px;
   }

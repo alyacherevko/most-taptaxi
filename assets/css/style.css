@@ -20,6 +20,12 @@ a {
 }
 
 
+#hamburger,
+#mobile-menu {
+  display: none;
+}
+
+
 
 
 
@@ -339,6 +345,10 @@ option {
   margin: 0;
 }
 
+.work__item--tablet {
+  display: none;
+}
+
 
 
 
@@ -456,6 +466,7 @@ option {
 }
 
 .reviews__box-text-row {
+  width: 385px;
   font-style: normal;
   font-weight: normal;
   line-height: 23px;
