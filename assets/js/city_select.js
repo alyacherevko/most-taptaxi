@@ -8,7 +8,8 @@
         var sterlitamak = new Array('Cалават');
         var tolyatti = new Array('Cызрань');
         var ufa = new Array('Hефтекамск', 'Cалават', 'Cтерлитамак');
-    
+        var all = new Array('Aльметьевск', 'Анапа', 'Белореченск', 'Волжский', 'Геленджик', 'Горячий', 'Джубга', 'Дзержинск', 'Заволжье', 'Красная Поляна', 'Набережные Челны', 'Hефтекамск', 'Новороссийск', 'Cалават', 'Семенов', 'Сочи', 'Cызрань', 'Tимашевск', 'Тольятти', 'Туапсе', 'Усть Лабинск');
+
         switch (ddl1.value) {
             case 'kasan':
                 ddl2.options.length = 0;
@@ -17,7 +18,7 @@
                 }
                 break;
             case 'krasnodar':
-                ddl2.options.length = 0; 
+                ddl2.options.length = 0;
             for (i = 0; i < krasnodar.length; i++) {
                 createOption(ddl2, krasnodar[i], krasnodar[i]);
                 }
@@ -66,6 +67,9 @@
                 break;
                 default:
                     ddl2.options.length = 0;
+                    for (i = 0; i < all.length; i++) {
+                      createOption(ddl2, all[i], all[i]);
+                    }
                 break;
         }
 

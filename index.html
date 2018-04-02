@@ -49,42 +49,56 @@
             <li><a href="#footer">Контакты</a></li>
           </ul>
         </div>
-          <ul class="header__nav-list">
-            <li class="header__nav-item"><a href="#work">Как работает</a></li>
-            <li class="header__nav-item"><a href="#advantages">Преимущества</a></li>
-            <li class="header__nav-item"><a href="#driver">Водителям</a></li>
-            <li class="header__nav-item"><a href="#about">О компании</a></li>
-            <li class="header__nav-item"><a href="#footer">Контакты</a></li>
-          </ul>
-          <div class="header__tel-box">
-            <h5 class="header__tel-title">Бесплатный звонок</h5>
-            <a href="tel:+78005553030" class="header__tel-link">+7-800-555-30-30</a>
-          </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#work">Как работает</a></li>
+          <li class="header__nav-item"><a href="#advantages">Преимущества</a></li>
+          <li class="header__nav-item"><a href="#driver">Водителям</a></li>
+          <li class="header__nav-item"><a href="#about">О компании</a></li>
+          <li class="header__nav-item"><a href="#footer">Контакты</a></li>
+        </ul>
+        <div class="header__tel-box">
+          <h5 class="header__tel-title">Бесплатный звонок</h5>
+          <a href="" class="header__tel-link">+7-800-555-30-30</a>
+
       </nav>
+    </div>
+    <div class="header__wrapper">
+      <h2 class="header__title">Путешествуй с профессиональным водителем</h2>
+      <div class="header__box">
+        <span class="header__text-span">из</span>
+        <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+          <option value=""></option>
+          <option value="kasan">Казань</option>
+          <option value="krasnodar">Краснодар</option>
+          <option value="ninovgorod">Нижний Новгород</option>
+          <option value="novorossisk">Новороссийск</option>
+          <option value="samara">Самара</option>
+          <option value="sochi">Сочи</option>
+          <option value="sterlitamak">Стерлитамак</option>
+          <option value="tolyatti">Тольятти</option>
+          <option value="ufa">Уфа</option>
+        </select>
+        <span class="header__text-span header__text-span--v">в</span>
+        <select id="ddl2"></select>
+        <p class="header__text">со скидкой до 40%*</p>
       </div>
-      <div class="header__wrapper">
-        <h2 class="header__title">Путешествуй с профессиональным водителем</h2>
-        <div class="header__box">
-          <span class="header__text-span">из</span>
-          <select id="ddl" onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
-            <option value=""></option>
-            <option value="kasan">Казань</option>
-            <option value="krasnodar">Краснодар</option>
-            <option value="ninovgorod">Нижний Новгород</option>
-            <option value="novorossisk">Новороссийск</option>
-            <option value="samara">Самара</option>
-            <option value="sochi">Сочи</option>
-            <option value="sterlitamak">Стерлитамак</option>
-            <option value="tolyatti">Тольятти</option>
-            <option value="ufa">Уфа</option>
-          </select>
-          <span class="header__text-span header__text-span--v">в</span>
-          <select id="ddl2"></select>
-          <p class="header__text">со скидкой до 40%*</p>
+      <a href="#modal1" class="header__link open_modal">Вызвать такси</a>
+      <div id="modal1" class="modal_div">
+            <!-- скрытый див с уникaльным id = modal1 -->
+            <span class="modal_close">X</span>
+            <h3 class="modal_title">Вызов такси</h3>
+            <p class="modal_text">Для заказа такси позвоните по номеру <br><span>+7-800-555-30-30</span></p>
+            <p class="modal_text">Или оставьте свой номер и вам перезвонят</p>
+            <form action="" class="footer__form">
+              <input type="tel" placeholder="+7-999-999-99-99">
+              <button class="footer__button">Перезвонить</button>
+            </form>
+          </div>
+          <div class="overlay"></div>
+          <!-- Пoдлoжкa, oднa нa всю стрaницу -->
         </div>
-        <a href="" class="header__link">Вызвать такси</a>
-        <p class="header__text-info">* на междугородние перевозки по сравнению со стоимостью по счетчику</p>
-      </div>
+      <p class="header__text-info">* на междугородние перевозки по сравнению со стоимостью по счетчику</p>
+    </div>
   </header>
   <section class="most">
     <div class="most__wrapper">
@@ -283,7 +297,9 @@
       <p class="footer__copyright">© 2018, Мост</p>
     </div>
   </footer>
+  <script src="./assets/js/popup.js"></script>
   <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/slider.js"></script>
 </body>
+
 </html>
