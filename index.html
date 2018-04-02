@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/slider.css">
   <link rel="stylesheet" href="./assets/css/menu_style.css">
+  <link rel="stylesheet" href="./assets/css/nav_scroll.css">
   <link rel="stylesheet" href="./assets/css/style1024.css">
   <link rel="stylesheet" href="./assets/css/style800.css">
   <link rel="stylesheet" href="./assets/css/style640.css">
@@ -33,10 +34,9 @@
 
 <body>
   <header class="header">
-    <div class="header__nav-wrapper">
-      <nav class="header__nav">
+      <nav class="header__nav navbar-fixed-top">
         <div class="header__logo-box">
-          <h1 class="header__nav-logo"><img src="./assets/img/most_logo_light.svg" alt="Мост"></h1>
+          <h1 class="header__nav-logo"><img src="./assets/img/most_logo_light.svg" alt="Мост" class="nav_img_noscroll"><img src="./assets/img/most_logo_dark.svg" alt="" class="nav_img_scroll"></h1>
           <h5 class="header__tel-title">Звонок по России бесплатный</h5>
           <a href="tel:+78005553030" class="header__tel-link">+7-800-555-30-30</a>
         </div>
@@ -61,7 +61,6 @@
             </ul>
           </div>
       </nav>
-    </div>
     <div class="header__wrapper">
       <h2 class="header__title">Путешествуй с профессиональным водителем</h2>
       <div class="header__box">
@@ -314,6 +313,7 @@
       <p class="footer__copyright">© 2018, Мост</p>
     </div>
   </footer>
+  <script src="./assets/js/nav_scroll.js"></script>
   <script src="./assets/js/popup.js"></script>
   <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/slider.js"></script>
