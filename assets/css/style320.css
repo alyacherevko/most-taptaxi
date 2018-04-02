@@ -20,7 +20,9 @@
 
   .header__nav-list,
   .header__tel-box,
-  .driver__box-2 {
+  .driver__box-2,
+  .header__tel-title,
+  .header__tel-link {
     display: none;
   }
 
@@ -52,6 +54,11 @@
     font-size: 14px;
     text-align: center;
     padding-top: 10px;
+    margin-top: 0;
+  }
+
+  .header__link--dex {
+    display: block;
   }
 
   .header__title {
@@ -87,6 +94,7 @@
   }
 
   .most__title {
+    width: 100%;
     font-size: 16px;
     margin: 0;
     line-height: 1.3;

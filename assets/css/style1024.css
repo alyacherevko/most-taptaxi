@@ -35,8 +35,8 @@
     font-size: 12.5px;
   }
 
-  .header__tel-link--mobile {
-    display: none;
+  .header__link--dex {
+    display: block;
   }
 
   .header__title {
