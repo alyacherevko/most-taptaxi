@@ -250,4 +250,8 @@
   .footer__copyright {
     padding-top: 50px;
   }
+
+  .for_mob {
+    display: none;
+  }
 }

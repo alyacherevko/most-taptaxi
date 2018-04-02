@@ -20,7 +20,8 @@
 
   .header__nav-list,
   .header__tel-box,
-  .driver__box-2 {
+  .driver__box-2,
+  .for_mob {
     display: none;
   }
 

@@ -18,7 +18,8 @@
     margin: 0 auto;
   }
 
-  .driver__box-2 {
+  .driver__box-2,
+  .for_mob {
     display: none;
   }
 
