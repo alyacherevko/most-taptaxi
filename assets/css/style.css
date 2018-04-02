@@ -71,11 +71,15 @@ a {
   justify-content: space-between;
 }
 
+.header__nav-logo {
+  text-align: center;
+}
+
 .header__nav-list {
   width: 50%;
   display: flex;
   justify-content: space-around;
-  padding-top: 10px;
+  padding-top: 42px;
 }
 
 .header__nav-item {
@@ -93,7 +97,7 @@ a {
   color: #EF7F1A;
 }
 
-.header__tel-box {
+.header__logo-box {
   display: flex;
   flex-direction: column;
 }
@@ -107,10 +111,6 @@ a {
   color: #FFFFFF;
 }
 
-.header__tel-link--mobile {
-  display: none;
-}
-
 .header__tel-link {
   font-style: normal;
   font-weight: normal;
@@ -119,6 +119,22 @@ a {
   color: #FFFFFF;
   text-align: center;
 }
+
+.header__tel-link--mobile {
+    display: inline-block;
+    width: 130px;
+    height: 42px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 33px;
+  }
 
 .header__title {
   padding-top: 180px;
@@ -182,11 +198,17 @@ option {
   line-height: normal;
   font-size: 14px;
   text-align: center;
-  color: #EF7F1A;
+  background-color: #EF7F1A;
+  color: #fff;
   border-radius: 50px;
-  border: 1px solid #EF7F1A;
   padding: 11px 39px;
   margin: 30px auto 160px;
+  transition: 0.5s ease;
+}
+
+
+.header__link:hover {
+  transform: scale(1.1);
 }
 
 .header__text-info {
@@ -237,6 +259,7 @@ option {
 }
 
 .most__title {
+  width: 460px;
   font-style: normal;
   font-weight: 500;
   line-height: 34px;
@@ -312,6 +335,7 @@ option {
   flex-direction: row;
 }
 
+
 .work__item-title {
   font-style: normal;
   font-weight: bold;
@@ -320,6 +344,11 @@ option {
   text-align: center;
   color: #ffffff;
   margin-bottom: 10px;
+}
+
+.work__list-2 .work__item-title {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .work__item-text {
@@ -404,6 +433,18 @@ option {
 
 .advantages__item-title {
   font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.advantages__item p {
+  width: 75%;
+  margin: 0 auto;
+    font-style: normal;
   font-weight: 400;
   line-height: normal;
   font-size: 16px;
@@ -933,6 +974,10 @@ option {
 .modal_div .footer__form {
   justify-content: center;
   margin-top: 20px;
+}
+
+.header__link--dex {
+  display: none;
 }
 
 
