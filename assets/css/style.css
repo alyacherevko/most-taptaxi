@@ -155,7 +155,6 @@ select {
   color: #fff;
   width: 180px;
   height: 40px;
-  background-color: rgba(250, 250, 250, 0.1);
   padding: 7px 15px;
   border-radius: 50px;
   border: 1px solid #fff;
@@ -711,7 +710,7 @@ option {
   height: 50px;
   border-radius: 50px;
   border: 1px solid #000000;
-  padding: 12px 23px 13px 25px;
+  padding: 12px 5px 13px 25px;
   color: #000000;
   font-style: normal;
   font-weight: normal;
